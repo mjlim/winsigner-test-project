@@ -6,13 +6,13 @@
   <name>MavenHelloWorld</name>
 
 
-  <repositories>
-    <repository>
+  <pluginRepositories>
+    <pluginRepository>
       <id>ucosp</id>
       <name>UCOSP Repository - Snapshots</name>
       <url>http://lts.eclipse.org/nexus/content/repositories/snapshots/</url>
-    </repository>
-  </repositories>
+    </pluginRepository>
+  </pluginRepositories>
 
   <build>
 	  <plugins>
