@@ -1,7 +1,40 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>eclipse</groupId>
-  <artifactId>MavenEclipseApp</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>MavenEclipseApp</name>
+  <groupId>org.ucosp.eclipse</groupId>
+  <artifactId>MavenHelloWorld</artifactId>
+  <version>0.0.2-SNAPSHOT</version>
+  <name>MavenHelloWorld</name>
+
+
+  <repositories>
+    <repository>
+      <id>ucosp</id>
+      <name>UCOSP Repository - Snapshots</name>
+      <url>http://lts.eclipse.org/nexus/content/repositories/snapshots/</url>
+    </repository>
+  </repositories>
+
+  <build>
+	  <plugins>
+		<plugin>
+		  <groupId>org.ucosp.eclipse</groupId>
+		  <artifactId>mvn-p2-vt-plugin</artifactId>
+		  <version>1.1-SNAPSHOT</version>
+	  	</plugin>
+		<plugin>
+		  <groupId>org.apache.maven.plugins</groupId>
+		  <artifactId>maven-jar-plugin</artifactId>
+		  <version>2.4</version>
+		  <configuration>
+			<archive>
+				<manifest>
+					<addClasspath>true</addClasspath>
+					<mainClass>MavenProject.Main</mainClass>
+				</manifest>
+			</archive>
+			<outputDirectory>${basedir}/bin/jar/</outputDirectory>
+		  </configuration>
+		</plugin>
+	  </plugins>
+  </build>
 </project>
