@@ -19,12 +19,12 @@
 		<plugin>
 		  <groupId>org.ucosp.eclipse</groupId>
 		  <artifactId>mvn-p2-vt-plugin</artifactId>
-		  <version>1.1-SNAPSHOT</version>
+		  <version>1.2-SNAPSHOT</version>
 		  <executions>
 			  <execution>
 				  <phase>package</phase>
 				  <goals>
-					<goal>callVC</goal>
+					<goal>add-maven-version</goal>
 			      </goals>
 			  </execution>
 		  </executions>
