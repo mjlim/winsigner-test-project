@@ -5,7 +5,7 @@
   <version>0.0.2-SNAPSHOT</version>
   <name>MavenHelloWorld</name>
 
-
+  <!--
   <pluginRepositories>
     <pluginRepository>
       <id>ucosp</id>
@@ -13,13 +13,14 @@
       <url>http://lts.eclipse.org/nexus/content/repositories/snapshots/</url>
     </pluginRepository>
   </pluginRepositories>
+  -->
 
   <build>
 	  <plugins>
 		<plugin>
-		  <groupId>org.eclipse.cbi</groupId>
-		  <artifactId>versiontracker</artifactId>
-		  <version>1.3-SNAPSHOT</version>
+		  <groupId>org.eclipse.cbi.versionchecker</groupId>
+		  <artifactId>org.eclipse.cbi.versionchecker.maven.plugin</artifactId>
+		  <version>1.4.0-SNAPSHOT</version>
 		  <executions>
 			  <execution>
 				  <phase>package</phase>
