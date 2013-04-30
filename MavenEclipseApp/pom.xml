@@ -17,7 +17,21 @@
 
   <build>
 	  <plugins>
-		<plugin>
+          <plugin>
+            <groupId>org.eclipse.cbi.maven.plugins</groupId>
+            <artifactId>eclipse-winsigner-plugin</artifactId>
+            <version>1.0.2-SNAPSHOT</version>
+            <executions>
+              <execution>
+                <id>sign</id>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+                <phase>verify</phase>
+              </execution>
+            </executions>
+          </plugin>
+          <!-- <plugin>
 		  <groupId>org.eclipse.cbi.versionchecker</groupId>
 		  <artifactId>org.eclipse.cbi.versionchecker.maven.plugin</artifactId>
 		  <version>1.4.0-SNAPSHOT</version>
@@ -32,7 +46,7 @@
 		  <configuration>
 			  <repositoryRoot>${basedir}/../.git</repositoryRoot>
 		  </configuration>
-	  	</plugin>
+      </plugin> -->
 		<plugin>
 		  <groupId>org.apache.maven.plugins</groupId>
 		  <artifactId>maven-jar-plugin</artifactId>
